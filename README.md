@@ -13,7 +13,7 @@ The output directory is created and mounted for the resulting RPM that is produc
 mkdir output
 
 export CONTAINERNAME="vscode_builder"
-export VERSION="0.1.4"
+export VERSION="0.1.5"
 
 # Build our container first with our toolchain.
 buildah bud -f vscode_builder -t $CONTAINERNAME:$VERSION

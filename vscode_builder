@@ -7,7 +7,7 @@ RUN npm install --global gulp-cli
 FROM vscode-builder
 
 ENV repo="https://github.com/timhansendev/vscodium.git"
-ENV tag="1543-linux-fedora"
+ENV tag="1550"
 ENV VSCODE_ARCH=x64
 
 ADD build.sh /build.sh
