@@ -13,7 +13,7 @@ The output directory is created and mounted for the resulting RPM that is produc
 mkdir output
 
 export CONTAINERNAME="vscode_builder"
-export VERSION="0.1.7"
+export VERSION="0.1.8"
 
 # Build our container first with our toolchain.
 buildah bud -f vscode_builder -t $CONTAINERNAME:$VERSION
@@ -33,7 +33,7 @@ unset VERSION
 The default ENV vars that are set for the build that can be changed at run time:
 
 * ENV repo="https://github.com/timhansendev/vscodium.git"
-* ENV tag="1552"
+* ENV tag="1560"
 * ENV VSCODE_ARCH=x64
 
 #### TODO
