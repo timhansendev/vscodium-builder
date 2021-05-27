@@ -33,7 +33,7 @@ unset VERSION
 The default ENV vars that are set for the build that can be changed at run time:
 
 * ENV repo="https://github.com/timhansendev/vscodium.git"
-* ENV tag="1560"
+* ENV tag="1562"
 * ENV VSCODE_ARCH=x64
 
 #### TODO
