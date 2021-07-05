@@ -1,13 +1,13 @@
-FROM fedora:33 as vscode-builder
+FROM fedora:34 as vscode-builder
 
 RUN dnf groupinstall -y "Development Tools"
-RUN dnf install -y libX11-devel.x86_64 libxkbfile-devel.x86_64 libsecret-devel yarnpkg nodejs fakeroot rpm-build jq
+RUN dnf install -y libX11-devel.x86_64 libxkbfile-devel.x86_64 libsecret-devel yarnpkg nodejs fakeroot rpm-build jq g++
 RUN npm install --global gulp-cli
 
 FROM vscode-builder
 
 ENV repo="https://github.com/timhansendev/vscodium.git"
-ENV tag="1562"
+ENV tag="1571"
 ENV VSCODE_ARCH=x64
 
 ADD build.sh /build.sh

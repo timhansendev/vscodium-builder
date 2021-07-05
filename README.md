@@ -16,7 +16,7 @@ export CONTAINERNAME="vscode_builder"
 export VERSION="0.1.8"
 
 # Build our container first with our toolchain.
-buildah bud -f vscode_builder -t $CONTAINERNAME:$VERSION
+podman build -f vscode_builder -t $CONTAINERNAME:$VERSION
 # Run the toolchain container and build script to build from source. Mount /home/ to move the resulting binary onto your local fs.
 podman run -v ./output/:/home/:Z $CONTAINERNAME:$VERSION
 
@@ -33,7 +33,7 @@ unset VERSION
 The default ENV vars that are set for the build that can be changed at run time:
 
 * ENV repo="https://github.com/timhansendev/vscodium.git"
-* ENV tag="1562"
+* ENV tag="1571"
 * ENV VSCODE_ARCH=x64
 
 #### TODO
